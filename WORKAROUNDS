@@ -1,0 +1,14 @@
+
+C:\RailsInstaller\Ruby2.0.0\lib\ruby\gems\2.0.0\gems\execjs-2.0.2\lib\execjs\runtimes
+
+change to 
+
+JScript = ExternalRuntime.new(
+    :name        => "JScript",
+    :command     => "cscript //E:jscript //Nologo",
+    :runner_path => ExecJS.root + "/support/jscript_runner.js",
+    :encoding    => 'UTF-8' # CScript with //U returns UTF-16LE
+)
+
+based on http://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial
+
